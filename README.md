@@ -24,6 +24,6 @@ Esta es la **Entrega 1** de Coderhouse: crear la landing de un e-commerce usando
 - CSS personalizado  
 
 
-## Instalación y ejecución
+## Clone
 
 1. Clonar el repositorio: git clone https://github.com/Rob-Ramos-Johnson/CreaTuLanding1-Ramos.git
