@@ -1,12 +1,29 @@
-# React + Vite
+# CreaTuLanding1-Ramos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Proyecto React + Vite
 
-Currently, two official plugins are available:
+Esta es la **Entrega 1** de Coderhouse: crear la landing de un e-commerce usando **React** y **Vite**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Barra de navegación ("NavBar") con enlaces: Inicio, Productos, Contacto.  
+- Ícono de carrito ("CartWidget") con contador dinámico.  
+- Contenedor de productos ("ItemListContainer") que recibe un `prop` con mensaje de bienvenida.  
+- Estilos con "Bootstrap" y CSS personalizado.  
+- Proyecto organizado en "componentes reutilizables" para facilitar la escalabilidad.
+
+
+## Tecnologías utilizadas
+
+- React 19  
+- Vite  
+- Bootstrap 5  
+- React-Bootstrap  
+- React-Icons  
+- CSS personalizado  
+
+
+## Instalación y ejecución
+
+1. Clonar el repositorio: git clone https://github.com/Rob-Ramos-Johnson/CreaTuLanding1-Ramos.git
