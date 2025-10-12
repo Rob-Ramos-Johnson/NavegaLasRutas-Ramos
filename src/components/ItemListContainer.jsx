@@ -1,21 +1,27 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { products } from "../data/products";
+import ItemList from "./ItemList";
 
 function ItemListContainer({ greeting }) {
+  const [items, setItems] = useState([]);
+  const { categoryId } = useParams();
+
+  useEffect(() => {
+    const getProducts = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(categoryId ? products.filter(p => p.categoria === categoryId) : products);
+      }, 800);
+    });
+
+    getProducts.then(res => setItems(res));
+  }, [categoryId]);
+
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col md={8}>
-          <Card className="text-center p-4 bg-light border-primary shadow">
-            <Card.Body>
-              <h2 className="text-primary">{greeting}</h2>
-              <p className="text-secondary">
-                Explora nuestros productos y disfruta de tu compra!
-              </p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="container py-4">
+      <h2 className="text-center mb-4">{greeting}</h2>
+      {items.length > 0 ? <ItemList items={items} /> : <p className="text-center">Cargando productos...</p>}
+    </div>
   );
 }
 

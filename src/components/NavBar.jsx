@@ -1,27 +1,21 @@
-import CartWidget from "./CartWidget";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { FaStore } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-          <FaStore size={24} />
-          Mi Tienda
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto"> {/* Cambiamos me-auto por mx-auto */}
-            <Nav.Link href="/" className="text-light">Inicio</Nav.Link>
-            <Nav.Link href="/productos" className="text-light">Productos</Nav.Link>
-            <Nav.Link href="/contacto" className="text-light">Contacto</Nav.Link>
-          </Nav>
-          <CartWidget />
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/">CreaTuLanding</Link>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item"><Link className="nav-link" to="/">Inicio</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/category/velas">Velas</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/category/incienso">Incienso</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/category/cristales">Cristales</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/category/difusores">Difusores</Link></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
