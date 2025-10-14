@@ -19,3 +19,47 @@ a {
 ul {
   list-style: none;
 }
+
+img, button, input {
+  outline: none !important;
+  border: none !important;
+}
+
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  outline: none !important;
+  border: none !important;
+}
+
+button,
+a,
+input {
+  /* outline: none !important; */
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+html, body {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* src/index.css - añadir al final */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  outline: none;
+  border: none;
+  transition: none;
+}
+
+/* Mantener accesibilidad: los outlines de botones se mantienen para teclado */
+button:focus, a:focus, input:focus {
+  outline: none; /* opcional, pero si lo quitas asegúrate de proveer :focus-visible */
+}
