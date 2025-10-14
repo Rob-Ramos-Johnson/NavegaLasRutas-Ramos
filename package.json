@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Rob-Ramos-Johnson.github.io/NavegaLasRutas--Ramos",
+  "homepage": "https://Rob-Ramos-Johnson.github.io/NavegaLasRutas-Ramos",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
